@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
+import MapExample from "components/Maps/MapExample.js";
+
+import backgroung_image from "assets/img/messHall.jpg";
 
 export default function Landing() {
   return (
@@ -16,7 +19,7 @@ export default function Landing() {
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')",
+              `url(${backgroung_image})`,
             }}
           >
             <span
@@ -29,13 +32,13 @@ export default function Landing() {
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                 <div className="pr-12">
                   <h1 className="text-white font-semibold text-5xl">
-                    Your story starts with us.
+                    Daca nu mai ai casa, hai aici la masa.
                   </h1>
-                  <p className="mt-4 text-lg text-blueGray-200">
+                  {/* <p className="mt-4 text-lg text-blueGray-200">
                     This is a simple example of a Landing Page you can build
                     using Notus React. It features multiple CSS components based
                     on the Tailwind CSS design system.
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
@@ -192,11 +195,22 @@ export default function Landing() {
           <div className="container mx-auto px-4">
             <div className="items-center flex flex-wrap">
               <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
-                <img
+                
+                
+                {/* <img
                   alt="..."
                   className="max-w-full rounded-lg shadow-lg"
                   src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-                />
+                /> */}
+
+                <div className="flex flex-wrap">
+                          <div className="w-full px-4">
+                            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+                              <MapExample />
+                            </div>
+                          </div>
+                        </div>
+
               </div>
               <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
                 <div className="md:pr-12">
