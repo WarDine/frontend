@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 import Footer from "components/Footers/Footer.js";
 
 import backgroung_image from "assets/img/messHall.jpg";
-
+export function callbackMy() {
+  console.log("Here")
+}
 export default function Landing() {
   return (
     <>
