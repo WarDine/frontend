@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth0 } from '@auth0/auth0-react';
 
 // components
 
@@ -10,6 +11,10 @@ export function callbackMy() {
   console.log("Here")
 }
 export default function Landing() {
+
+  const { loginWithRedirect } = useAuth0();
+  const { logout } = useAuth0();
+
   return (
     <>
       <main>
@@ -75,10 +80,10 @@ export default function Landing() {
                     <p className="mt-2 mb-4 text-blueGray-500">
                       Login in you Agency account to have fine controll over all mess halls in the area.
                     </p>
-                    <button class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">
-                      <a href="/mainadmin" className = "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">  
+                    <button onClick={() => loginWithRedirect({redirectUri: "http://localhost:3000/mainadmin"})} class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">
+                      {/* <a href="/mainadmin" className = "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">   */}
                       <span>Login as Regulatory Body</span>
-                      </a>
+                      {/* </a> */}
                     </button>
                   </div>
                 </div>
@@ -94,10 +99,10 @@ export default function Landing() {
                     <p className="mt-2 mb-4 text-blueGray-500">
                       You can check out where is the closest place you can find a hot meal. No account required.
                     </p>
-                    <button class="bg-lightBlue-400 hover:bg-lightBlue-400 text-white font-bold py-2 px-4 border-b-4 border-lightBlue-700 hover:border-lightBlue-500 rounded">
-                      <a href="/user" className = "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">  
+                    <button onClick={() => logout({redirectUri: "http://localhost:3000"})} class="bg-lightBlue-400 hover:bg-lightBlue-400 text-white font-bold py-2 px-4 border-b-4 border-lightBlue-700 hover:border-lightBlue-500 rounded">
+                      {/* <a href="/user" className = "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">   */}
                         <span>Get a Hot Meal</span>
-                      </a>
+                      {/* </a> */}
                     </button>
                   </div>
                 </div>
@@ -113,10 +118,10 @@ export default function Landing() {
                     <p className="mt-2 mb-4 text-blueGray-500">
                       You can register as a mess hall owner. By creating an account you will be able to register a new mess hall for those in need in no time.
                     </p>
-                    <button class="bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-2 px-4 border-b-4 border-emerald-700 hover:border-emerald-500 rounded">
-                      <a href="/admin" className = "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">  
+                    <button onClick={() => loginWithRedirect({redirectUri: "http://localhost:3000/admin"})} class="bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-2 px-4 border-b-4 border-emerald-700 hover:border-emerald-500 rounded">
+                      {/* <a href="/admin" className = "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">   */}
                         <span>Login as Mess Hall Admin</span>
-                      </a>
+                      {/* </a> */}
                     </button>
                   </div>
                 </div>
