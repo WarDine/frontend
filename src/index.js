@@ -1,34 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { Auth0Provider } from "@auth0/auth0-react";
+import { authSettings } from "./configs/AuthSettings";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "assets/styles/tailwind.css";
+import App from "App";
 
-// layouts
-
-import Admin from "layouts/Admin.js";
-import Auth from "layouts/Auth.js";
-
-// views without layouts
-
-import Landing from "views/Landing.js";
-import Profile from "views/Profile.js";
-// import Index from "views/Index.js";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      {/* add routes with layouts */}
-      <Route path="/admin" component={Admin} />
-      <Route path="/auth" component={Auth} />
-      {/* add routes without layouts */}
-      <Route path="/" exact component={Landing} />
-      <Route path="/profile" exact component={Profile} />
-      {/* <Route path="/" exact component={Index} /> */}
-      {/* add redirect for first page */}
-      <Redirect from="*" to="/" />
-    </Switch>
-  </BrowserRouter>,
+      <Auth0Provider
+        domain={authSettings.domain}
+        clientId={authSettings.clientId}
+        redirectUri={window.location.origin}
+        audience={authSettings.audience}
+      >
+      <App />
+    </Auth0Provider>,
   document.getElementById("root")
 );
