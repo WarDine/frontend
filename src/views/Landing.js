@@ -76,7 +76,7 @@ export default function Landing() {
                       Login in you Agency account to have fine controll over all mess halls in the area.
                     </p>
                     <button class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">
-                      <a href="/auth/register" className = "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">  
+                      <a href="/mainadmin" className = "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">  
                       <span>Login as Regulatory Body</span>
                       </a>
                     </button>
@@ -95,7 +95,7 @@ export default function Landing() {
                       You can check out where is the closest place you can find a hot meal. No account required.
                     </p>
                     <button class="bg-lightBlue-400 hover:bg-lightBlue-400 text-white font-bold py-2 px-4 border-b-4 border-lightBlue-700 hover:border-lightBlue-500 rounded">
-                      <a href="/admin/maps" className = "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">  
+                      <a href="/user" className = "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">  
                         <span>Get a Hot Meal</span>
                       </a>
                     </button>
@@ -114,7 +114,7 @@ export default function Landing() {
                       You can register as a mess hall owner. By creating an account you will be able to register a new mess hall for those in need in no time.
                     </p>
                     <button class="bg-emerald-500 hover:bg-emerald-400 text-white font-bold py-2 px-4 border-b-4 border-emerald-700 hover:border-emerald-500 rounded">
-                      <a href="/auth/register" className = "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">  
+                      <a href="/admin" className = "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">  
                         <span>Login as Mess Hall Admin</span>
                       </a>
                     </button>
