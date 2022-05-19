@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useAuth0 } from '@auth0/auth0-react';
 
 // components
@@ -13,7 +12,6 @@ export function callbackMy() {
 export default function Landing() {
 
   const { loginWithRedirect } = useAuth0();
-  const { logout } = useAuth0();
 
   return (
     <>
@@ -99,10 +97,11 @@ export default function Landing() {
                     <p className="mt-2 mb-4 text-blueGray-500">
                       You can check out where is the closest place you can find a hot meal. No account required.
                     </p>
-                    <button onClick={() => logout({redirectUri: "http://localhost:3000"})} class="bg-lightBlue-400 hover:bg-lightBlue-400 text-white font-bold py-2 px-4 border-b-4 border-lightBlue-700 hover:border-lightBlue-500 rounded">
-                      {/* <a href="/user" className = "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">   */}
+                    {/* onClick={() => logout({redirectUri: "http://localhost:3000"})} */}
+                    <button class="bg-lightBlue-400 hover:bg-lightBlue-400 text-white font-bold py-2 px-4 border-b-4 border-lightBlue-700 hover:border-lightBlue-500 rounded">
+                      <a href="/user" className = "flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">  
                         <span>Get a Hot Meal</span>
-                      {/* </a> */}
+                      </a>
                     </button>
                   </div>
                 </div>
