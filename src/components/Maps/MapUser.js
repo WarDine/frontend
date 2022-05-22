@@ -1,12 +1,29 @@
 import React from "react";
+import axios from 'axios';
+
+const requestURLInfo = `http://messhallmanager:8081/messhallmanager/messhall/info`
+
+function getCoords() {
+  axios.get(requestURLInfo)
+  .then(res => {
+    const messhallsInfo = res.data;
+    console.log(messhallsInfo);
+    // this.setState({ messhallsInfo: res.data });
+  })
+}
 
 function MapExample() {
   const mapRef = React.useRef(null);
   React.useEffect(() => {
+    getCoords()
+
     let google = window.google;
     let map = mapRef.current;
+
     let lat = "44.4268";
     let lng = "26.1025";
+
+
     const myLatlng = new google.maps.LatLng(lat, lng);
     const mapOptions = {
       zoom: 12,

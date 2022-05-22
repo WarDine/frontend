@@ -6,7 +6,7 @@ import CardStats from "components/Cards/CardStats.js";
 import backgroung_image from "assets/img/messHall.jpg";
 
 function callbackAddMessHall() {
-  console.log("Here")
+  window.location.href = "http://localhost:3000/mainadmin/dashboard/addmesshall";
 }
 
 function callbackRemoveMessHall() {

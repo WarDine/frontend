@@ -8,7 +8,7 @@ import FooterAdmin from "components/Footers/FooterAdmin.js";
 import UserNavbar from "components/Navbars/UserNavbar.js";
 
 // views
-import Maps from "views/user/Maps.js";
+import UserMaps from "views/user/Maps.js";
 
 export default function User() {
   return (
@@ -18,7 +18,7 @@ export default function User() {
         <HeaderUser />
         <div className="px-4 md:px-10 mx-auto w-full -m-24">
           <Switch>
-            <Route path="/user/maps" exact component={Maps} />
+            <Route path="/user/maps" exact component={UserMaps} />
             <Redirect from="/user" to="/user/maps" />
           </Switch>
           <FooterAdmin />
