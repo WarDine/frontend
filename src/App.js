@@ -8,7 +8,6 @@ import Landing from "views/Landing.js";
 import Profile from "views/Profile.js";
 
 // layouts
-
 import Admin from "layouts/Admin.js";
 import MainAdmin from "layouts/MainAdmin";
 import User from "layouts/User";

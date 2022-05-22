@@ -3,7 +3,7 @@ import React from "react";
 // components
 
 import MapUser from "components/Maps/MapUser.js";
-import MessHallInfoTable from "components/Tables/MessHallInfoTable.js";
+import CardPageVisitsUser from "components/Cards/CardPageVisitsUser.js";
 
 export default class UserMaps extends React.Component {
 
@@ -16,11 +16,11 @@ export default class UserMaps extends React.Component {
               <MapUser />
             </div>
           </div>
-          {/* <div className="w-full lg:w-8/12 xl:w-6/12 px-4" style={{ height: "60%", overflow: "scroll" }} >
+          <div className="w-full lg:w-8/12 xl:w-6/12 px-4" style={{ height: "60%", overflow: "scroll" }} >
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-              <MessHallInfoTable />
+              <CardPageVisitsUser />
             </div>
-          </div> */}
+          </div>
         </div>
       </>
     );

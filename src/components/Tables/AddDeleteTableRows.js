@@ -1,40 +1,35 @@
 import React from "react";
+import axios from 'axios';
 import TableDropdown from "components/Dropdowns/TableDropdown.js";
 
+const URLmesshall = `http://172.19.0.3:8081`
+const URLrecipe = `http://172.19.0.2:8080`
+
+const requestURLInfo = URLmesshall + `/messhallmanager/messhall/info`
 
 export default class AddDeleteTableRows extends React.Component {
     state = {
-        rows: [{}]
+        messhallsInfo: [{
+            messHallUID: "",
+            street: "",
+            city: "",
+            country: "",
+            menuUID: "",
+            status: "",
+            attendanceNumber: 0
+        }]
     };
-    handleChange = idx => e => {
-        const { name, value } = e.target;
-        const rows = [...this.state.rows];
-        rows[idx] = {
-            [name]: value
-        };
-        this.setState({
-            rows
-        });
-    };
-    handleAddRow = () => {
-        const item = {
-            name: "",
-            mobile: ""
-        };
-        this.setState({
-            rows: [...this.state.rows, item]
-        });
-    };
-    handleRemoveRow = () => {
-        this.setState({
-            rows: this.state.rows.slice(0, -1)
-        });
-    };
-    handleRemoveSpecificRow = (idx) => () => {
-        const rows = [...this.state.rows]
-        rows.splice(idx, 1)
-        this.setState({ rows })
+
+    componentDidMount() {
+        // this.getMessHallsInfo()
+        axios.get(requestURLInfo)
+            .then(res => {
+                const messhallsInfo = res.data;
+                // console.log(res.data)
+                this.setState({ messhallsInfo: res.data });
+            })
     }
+
     render() {
         return (
             <div>
@@ -54,7 +49,7 @@ export default class AddDeleteTableRows extends React.Component {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {this.state.rows.map((item, idx) => (
+                                    {this.state.messhallsInfo.map(() => (
 
                                         <tr>
                                             <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">

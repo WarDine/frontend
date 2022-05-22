@@ -84,8 +84,8 @@ function MapExample() {
     });
 
     const contentString =
-      '<div class="info-window-content"><h2>Notus React</h2>' +
-      "<p>A free Admin for Tailwind CSS, React, and React Hooks.</p></div>";
+      '<div class="info-window-content"><h2>WarDine</h2>' +
+      "<p>Here should be info about a mess hall.</p></div>";
 
     const infowindow = new google.maps.InfoWindow({
       content: contentString,

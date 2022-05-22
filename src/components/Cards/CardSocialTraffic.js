@@ -1,8 +1,11 @@
 import React from "react";
 import axios from 'axios';
 
+const URLmesshall = `http://172.19.0.2:8081`
+const URLrecipe = `http://172.19.0.3:8080`
+
 // components
-const requestURLInfo = `http://messhallmanager:8081/messhallmanager/messhall/info`
+const requestURLInfo = URLmesshall + `/messhallmanager/messhall/info`
 
 export default class CardSocialTraffic extends React.Component {
   state = {

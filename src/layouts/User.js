@@ -13,7 +13,7 @@ import UserMaps from "views/user/Maps.js";
 export default function User() {
   return (
     <>
-      <UserNavbar></UserNavbar>
+      {/* <UserNavbar></UserNavbar> */}
       <div className="relative bg-blueGray-100">
         <HeaderUser />
         <div className="px-4 md:px-10 mx-auto w-full -m-24">

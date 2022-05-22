@@ -41,7 +41,7 @@ export default function HeaderStats() {
                   statIconColor="bg-orange-500"
                 />
               </div>
-              <div className="w-full lg:w-6/12 xl:w-4/12 px-4">
+              {/* <div className="w-full lg:w-6/12 xl:w-4/12 px-4">
                 <CardStats
                   cardText = "Remove Mess Hall"
                   cardCallback = {callbackRemoveMessHall}
@@ -49,8 +49,8 @@ export default function HeaderStats() {
                   statIconName="fas fa-users"
                   statIconColor="bg-pink-500"
                 />
-              </div>
-              <div className="w-full lg:w-6/12 xl:w-4/12 px-4">
+              </div> */}
+              {/* <div className="w-full lg:w-6/12 xl:w-4/12 px-4">
                 <CardStats
                   cardText= "Change Mess Hall Status"
                   cardCallback = {callbackUpdateMessHall}
@@ -58,7 +58,7 @@ export default function HeaderStats() {
                   statIconName="fas fa-percent"
                   statIconColor="bg-lightBlue-500"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

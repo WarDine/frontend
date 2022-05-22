@@ -95,13 +95,13 @@ export default class CardPageVisits extends React.Component {
               <thead>
                 <tr>
                   <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                    Messhall UID
+                    Status
                   </th>
                   <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                    Mainhall Address
+                    Address
                   </th>
                   <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                    Change State
+                    Attendants
                   </th>
                   <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                     {/* Change State */}
@@ -114,29 +114,20 @@ export default class CardPageVisits extends React.Component {
 
                   <tr>
                     <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                      <span> {rowState.messHallUID} </span>
+                      <span> {rowState.status} </span>
                     </th>
+
                     <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                       <span> {
                         rowState.street + ", " + rowState.city + ", " + rowState.country
                       } </span>
                     </td>
-                    <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                      <button onClick={() => { this.changeStatus (rowState) }} class="bg-slate-200 hover:bg-red-400 text-black font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">
-                        <span> {rowState.status} </span>
-                      </button>
-                    </td>
-                    <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                      {/* <i className="fas fa-arrow-up text-emerald-500 mr-4"></i> */}
-                      <button onClick={() => { this.removeMessHall (rowState) }} class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">
-                        <span> Remove </span>
-                      </button>
-                    </td>
+                    
+                    <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
+                      <span> {rowState.attendanceNumber} </span>
+                    </th>
                   </tr>
-
                 ))}
-
-
               </tbody>
             </table>
           </div>

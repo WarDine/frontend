@@ -16,7 +16,7 @@ export default class MainAdmin extends React.Component {
   render() {
     return (
       <>
-        <MainAdminNavbar></MainAdminNavbar>
+        {/* <MainAdminNavbar></MainAdminNavbar> */}
         <div className="relative bg-blueGray-100">
           <HeaderStats />
           <div className="px-4 md:px-10 mx-auto w-full -m-24">
