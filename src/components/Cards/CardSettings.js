@@ -1,7 +1,7 @@
 import React from "react";
 import axios from 'axios';
 
-const requestURLAdd = `http://messhallmanager:8081/messhallmanager/messhall/add`
+const requestURLAdd = `http://localhost:90/messhallmanager/messhall/add`
 
 function submitNewMessHallInfo() {
   let adminNickname = document.getElementById("messHallAdminNickname").value;
